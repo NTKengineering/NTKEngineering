@@ -36,13 +36,16 @@ canvas {
 }
 
 #ready .title {
-  width: 40vw;
+  min-width: 40vw;
+  min-height: 5vh;
   color: #fff;
   opacity: 0;
   text-align: center;
   letter-spacing: 1vw;
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
-  font-size: 2vw;
+  font-size: 130%;
   font-weight: 200;
   display: block;
   position: relative;
@@ -197,26 +200,21 @@ canvas {
 }
 
 @media screen and (max-width: 462px) {
-  .card1, .card2, .card3, .card4 {
-    height: 15vh;
-    width: 26vh;
-  }
-
-  #readyTitle .title {
+  .title {
     letter-spacing: .7rem;
-    font-size: 10px;
-    transform: translateX(2%);
-  }
-
-  .name {
-    text-align: center;
-    letter-spacing: .7rem;
-    font-size: 2.7rem;
-    transform: translateX(3%);
+    width: 80vw;
+    height: 10vw;
   }
 
   #projects {
     top: 160%;
+  }
+
+  .name {
+    text-align: center;
+    width: 80vw;
+    letter-spacing: .7rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -273,6 +271,64 @@ canvas {
   font-size: 1vw;
   font-weight: 100;
   position: absolute;
+}
+
+@media screen and (max-width: 462px) {
+  .card1 p, .card2 p, .card3 p, .card4 p {
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    filter: contrast();
+    opacity: 1;
+    color: #fff;
+    z-index: 11;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 120%;
+    font-weight: 200;
+    display: flex;
+    position: absolute;
+  }
+
+  .card1, .card2, .card3, .card4 {
+    height: 15vh;
+    width: 35vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  #social {
+    width: 20vw;
+    top: 3vh;
+    left: 80vw;
+  }
+
+  #github, #linkedIn {
+    width: 60%;
+  }
+
+  #gradientBorder {
+    width: 20vw;
+    height: 3vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    display: flex;
+    top: 3.7vh;
+  }
+
+  #contact {
+    width: 95%;
+    height: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 90%;
+    display: flex;
+  }
 }
 
 .harmony:hover, .sphereNoise:hover, .simplyNews:hover, .idleGame:hover {
@@ -360,6 +416,26 @@ canvas {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #aboutMe h1 {
+    margin-bottom: 0;
+  }
+
+  #aboutMe p {
+    padding-top: 0;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #aboutMe p {
+    padding: 20px;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+}
+
 #aboutMe h1 {
   color: #fff;
   height: 8vh;
@@ -378,11 +454,8 @@ canvas {
   width: 90%;
   height: 60%;
   margin: 0 auto;
-  padding: 20px;
   font-family: sans-serif;
-  font-size: 1.5rem;
   font-weight: 300;
-  line-height: 3rem;
   display: block;
   position: relative;
 }
@@ -456,15 +529,25 @@ canvas {
 
 @media screen and (max-width: 600px) {
   #contactModal {
-    height: 2%;
-    top: 5%;
+    height: 7%;
+    width: 60%;
+    top: 8%;
+    left: 40%;
+  }
+
+  #contactMain p {
+    width: 90%;
+    height: 90%;
+    margin: 0;
+    padding: 0;
+    font-size: 110%;
   }
 }
 
 #contactMain {
   z-index: 13;
   opacity: .8;
-  width: 99.3%;
+  width: 98.8%;
   height: 92%;
   background-color: #000;
   border-radius: 10px;
@@ -492,24 +575,27 @@ canvas {
   @keyframes contactAnimation {
     from {
       opacity: 0;
-      width: 25%;
-      height: 1%;
-      left: 15%;
+      width: 55%;
+      height: 6%;
+      left: 35%;
     }
 
     to {
       opacity: .8;
-      width: 30%;
-      left: 20%;
+      width: 60%;
+      height: 7%;
+      left: 40%;
     }
   }
 }
 
 #contactMain p {
   color: #fff;
+  justify-content: center;
+  align-items: center;
   font-family: sans-serif;
-  font-size: 1.5vw;
   font-weight: 300;
+  display: flex;
 }
 
-/*# sourceMappingURL=index.a44d8bb0.css.map */
+/*# sourceMappingURL=index.936c3126.css.map */
